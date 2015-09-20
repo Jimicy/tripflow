@@ -118,6 +118,12 @@
                       <div class="panel panel-new" ng-repeat="event in events">
                         <div class="panel-body">
                           <div class="row">
+                            <input
+                              type="checkbox"
+                              name="selectedEvents[]"
+                              value="{{event}}"
+                              ng-checked="selection.indexOf(event) > -1"
+                              ng-click="toggleSelection(event)">
                             <div class="col-md-4"><img src="https://cdn2.iconfinder.com/data/icons/flat-ui-free/200/calendar.png" width="155px" /></div>
                             <div class="col-md-8">
                               1. <a href="#" class="link-title">{{event.name}}</a> <br />
