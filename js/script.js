@@ -87,7 +87,11 @@ var events = [];
           }
           $("#profile-pic").attr("src", picture);
           $("#profile-pic").before(name);
-          $scope.events = events;
+
+          $scope.$apply(function () {
+            $scope.events = events;
+          });
+
           myDataRef.child(response.id).set({name: name, picture: picture, events: events});
         }
       }
