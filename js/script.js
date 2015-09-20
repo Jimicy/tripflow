@@ -85,8 +85,9 @@ var events = [];
           if (response.events) {
             events = response.events.data;
           }
-          $("#profile-pic").attr("src", picture);
-          $("#profile-pic").before(name);
+
+          $scope.profileName = name;
+          $scope.profilePicURL = picture;
 
           $scope.$apply(function () {
             $scope.events = events;
