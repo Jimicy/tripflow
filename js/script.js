@@ -56,6 +56,7 @@ $scope.toggleSelection = function toggleSelection(event) {
       statusChangeCallback(response);
     });
   }
+  $scope.checkLoginState = checkLoginState;
 
   window.fbAsyncInit = function() {
   FB.init({
