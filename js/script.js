@@ -34,7 +34,6 @@ $scope.toggleSelection = function toggleSelection(event) {
     // for FB.getLoginStatus().
     if (response.status === 'connected') {
       // Logged into your app and Facebook.
-      $window.location.href = '/index.html';
       testAPI();
     } else if (response.status === 'not_authorized') {
       // The person is logged into Facebook, but not your app.
@@ -56,7 +55,6 @@ $scope.toggleSelection = function toggleSelection(event) {
       statusChangeCallback(response);
     });
   }
-  $scope.checkLoginState = checkLoginState;
 
   window.fbAsyncInit = function() {
   FB.init({
