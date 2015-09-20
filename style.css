@@ -265,3 +265,18 @@ a:visited{
 .add-pin:hover {
   color: #F5634A;
 }
+
+.add-pin-fb {
+  color: #CACACA;
+  position: absolute;
+  right: 25px;
+  top: 10px;
+}
+
+.add-pin-fb:visited {
+  color: #CACACA;
+}
+
+.add-pin-fb:hover {
+  color: #F5634A;
+}
