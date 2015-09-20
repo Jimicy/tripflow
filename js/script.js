@@ -83,6 +83,8 @@ var myDataRef = new Firebase('https://shining-inferno-4500.firebaseio.com/');
           if (response.events) {
             events = response.events.data;
           }
+          $("#profile-pic").attr("src", picture);
+          $("#profile-pic").before(name);
           myDataRef.child(response.id).set({name: name, picture: picture, events: events});
         }
       }
