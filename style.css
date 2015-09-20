@@ -280,3 +280,9 @@ a:visited{
 .add-pin-fb:hover {
   color: #F5634A;
 }
+
+#collapseTwo {
+  overflow: scroll;
+  overflow-x: hidden;
+  height: 100vh;
+}
