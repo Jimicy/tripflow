@@ -10,7 +10,8 @@ $scope.selection = [];
 
 //toggle selection for a given event by name
 $scope.toggleSelection = function toggleSelection(event) {
-  var idex = $scope.selection.indexOf(event);
+  console.log(event);
+  var idx = $scope.selection.indexOf(event);
 
   // is currently selected
   if (idx > -1) {
