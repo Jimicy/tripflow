@@ -4,6 +4,24 @@ angular.module('tripFlow', []).controller('TripController',['$scope', function($
 var myDataRef = new Firebase('https://shining-inferno-4500.firebaseio.com/');
 
 var events = [];
+
+//selected Events
+$scope.selection = [];
+
+//toggle selection for a given event by name
+$scope.toggleSelection = function toggleSelection(event) {
+  var idex = $scope.selection.indexOf(event);
+
+  // is currently selected
+  if (idx > -1) {
+    $scope.selection.splice(idx, 1);
+  }
+
+  // is newly selected
+  else {
+    $scope.selection.push(event);
+  }
+};
 //---------------------------------------------------
 
 // This is called with the results from from FB.getLoginStatus().
