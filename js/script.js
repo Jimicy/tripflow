@@ -19,6 +19,11 @@ $scope.selection = [];
 //toggle selection for a given event by name
 $scope.toggleSelection = function toggleSelection(event) {
   console.log(event);
+  var kk = -5;
+  for(var k = 0; k < $scope.selection.length; k++){
+    if ($scope.selection[k].name == event.name)
+      kk = k;
+  }
   var idx = $scope.selection.indexOf(event);
 
   var pointOfInterest = {lat: event.place.location.latitude,
@@ -26,8 +31,8 @@ $scope.toggleSelection = function toggleSelection(event) {
                          name: event.name};
 
   // is currently selected
-  if (idx > -1) {
-    $scope.selection.splice(idx, 1);
+  if (k > 0) {
+    $scope.selection.splice(k, 1);
     setData($scope.selection);
   }
 
