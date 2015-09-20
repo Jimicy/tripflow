@@ -110,7 +110,7 @@ $scope.toggleSelection = function toggleSelection(event) {
 
           if (response.events) {
             var today = new Date(); //get today's date
-            for (event of events) {
+            for (event of response.events) {
               if (event.place.location.latitude && event.place.location.longitude) {
                 var startDate = new Date(event.start_time);
                 if (startDate >= today) {
