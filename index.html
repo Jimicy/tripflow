@@ -37,14 +37,13 @@
             <li class="active"><a href="#home"><span class="glyphicon glyphicon-road" aria-hidden="true"></span></a></li>
             <li><a href="#menu1"><span class="glyphicon glyphicon-bookmark" aria-hidden="true"></span></a></li>
             <li><a href="#menu2"><span class="glyphicon glyphicon-comment" aria-hidden="true"></span></a></li>
+            <button class="btn btn-primary btn-sm" style="border: none; margin: 11px 15px 0 0; float: right;" ng-click="loginFb()">Login to Facebook</button>
           </ul>
           <div class="tab-content">
             <div id="home" class="tab-pane fade in active">
                 <div class="row">
                   <div class="col-md-8">
                     <div class="travel-head">Travel Plan</div>
-                    <button ng-click="loginFb()">Login to Facebook</button>
-                    <fb:login-button scope="public_profile,email,user_events,user_friends" onlogin="checkLoginState();"></fb:login-button>
                   </div>
                   <div class="col-md-4" style="text-align: right;">
                     <a class="addstyle" href="#" id="popover" data-placement="left">
@@ -53,18 +52,19 @@
                   </div>
                 </div>
 
-              <div id="popover-content" class="hide">
-                <form>
-                  <input type="text" name="search" style="border: none;" placeholder="Add city..." onfocus="this.placeholder = ''" onblur="this.placeholder = 'Add city...'" />
-                </form>
-              </div>
+                <div id="popover-content" class="hide">
+                    <form onsubmit="addCity(); return false;">
+                      <input type="text" id="cityInput" style="border: none;" placeholder="Add city..." onfocus="this.placeholder = ''" onblur="this.placeholder = 'Add city...'" />
+                      <input type="submit" style="position: absolute; left: -9999px" name="submit" />
+                    <form>
+                </div>
 
               <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
                 <div class="panel panel-default">
                   <div class="panel-heading" role="tab" id="headingOne">
                     <h4 class="panel-title">
                       <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                        Toronto, Canada
+                        <span id="cityName"></span>
                       </a>
                     </h4>
                   </div>
@@ -193,9 +193,9 @@
     </div>
   </div>
 
-  <div class="map-menu" id="timeline">
+  <!--div class="map-menu" id="timeline">
 
-  </div>
+  </div-->
 
   <!-- Javascript Components -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>

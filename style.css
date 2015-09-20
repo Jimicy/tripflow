@@ -352,3 +352,7 @@ a:visited{
 .view-trip:hover {
   background: #F5634A;
 }
+
+#accordion {
+  display: none;
+}

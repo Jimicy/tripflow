@@ -1,3 +1,11 @@
+var city;
+
+function addCity() {
+  $('#accordion').show();
+  var city = $('#cityInput').val();
+  $('#cityName').html(city);
+}
+
 angular.module('tripFlow', []).controller('TripController',['$scope', function($scope) {
 
 //Firebase
