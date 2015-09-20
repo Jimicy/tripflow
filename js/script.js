@@ -33,7 +33,7 @@ var events = [];
   // Button.  See the onlogin handler attached to it in the sample
   // code below.
   function checkLoginState() {
-    FB.getLoginStatus(function(response) {
+    FB.getLoginStatus(response => {
       this.statusChangeCallback(response);
     });
   }
@@ -58,7 +58,7 @@ var events = [];
   //
   // These three cases are handled in the callback function.
 
-  FB.getLoginStatus(function(response) {
+  FB.getLoginStatus(response => {
     this.statusChangeCallback(response);
   });
 
