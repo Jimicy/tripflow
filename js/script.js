@@ -1,6 +1,7 @@
 //Firebase
 var myDataRef = new Firebase('https://shining-inferno-4500.firebaseio.com/');
 
+var events = [];
 //---------------------------------------------------
 
 // This is called with the results from from FB.getLoginStatus().
@@ -79,7 +80,6 @@ var myDataRef = new Firebase('https://shining-inferno-4500.firebaseio.com/');
         if (response && !response.error) {
           var name = response.name;
           var picture = response.picture.data.url;
-          var events = [];
           if (response.events) {
             events = response.events.data;
           }
@@ -94,3 +94,7 @@ var myDataRef = new Firebase('https://shining-inferno-4500.firebaseio.com/');
 myDataRef.on('child_added', function(snapshot) {
   console.log(snapshot.val());
 });
+
+function tripController($scope, $location) {
+  $scope.events = events;
+}

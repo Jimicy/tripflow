@@ -1,13 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app>
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular.min.js"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
   <link rel="stylesheet" href="style.css">
   <title>Trip Flow</title>
 </head>
-<body>
+<body ng-controller="tripController">
 
   <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="navbar-header">
@@ -102,20 +103,35 @@
                     </div>
                   </div>
                 </div>
-                <!--div class="panel panel-default">
+                <div class="panel panel-default">
                   <div class="panel-heading" role="tab" id="headingTwo">
                     <h4 class="panel-title">
                       <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                        Athenes, Greece
+                        Facebook Events
                       </a>
                     </h4>
                   </div>
                   <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
                     <div class="panel-body">
-                      Location 2
+                      <div class="panel panel-new" ng-repeat="event in events">
+                        <div class="panel-body">
+                          <div class="row">
+                            <div class="col-md-4"><img src="https://ryanbolton.files.wordpress.com/2013/06/cn-tower-6.jpg" width="155px" /></div>
+                            <div class="col-md-8">
+                              1. <a href="#" class="link-title">{{event.name}}</a> <br />
+                              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                              <span class="glyphicon glyphicon-star" aria-hidden="true"></span> <br />
+                              "Awesome free standing towering over the rest of the city."
+                              <a href="#" class="add-pin" id="loc-234"><span class="glyphicon glyphicon-pushpin" aria-hidden="true"></span></a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
-                </div-->
+                </div>
                 <!--div class="panel panel-default">
                   <div class="panel-heading" role="tab" id="headingThree">
                     <h4 class="panel-title">
