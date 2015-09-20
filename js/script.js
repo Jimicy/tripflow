@@ -31,7 +31,7 @@ $scope.toggleSelection = function toggleSelection(event) {
                          name: event.name};
 
   // is currently selected
-  if (k > 0) {
+  if (k > -1) {
     $scope.selection.splice(k, 1);
     setData($scope.selection);
   }
