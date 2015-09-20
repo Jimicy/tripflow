@@ -37,7 +37,7 @@ var myDataRef = new Firebase('https://shining-inferno-4500.firebaseio.com/');
 
   window.fbAsyncInit = function() {
   FB.init({
-    appId      : '1614226585496485',
+    appId      : '1614433488809128',
     cookie     : true,  // enable cookies to allow the server to access the session
     xfbml      : true,  // parse social plugins on this page
     version    : 'v2.4'
