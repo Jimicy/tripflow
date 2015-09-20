@@ -63,6 +63,8 @@ $scope.toggleSelection = function toggleSelection(event) {
     });
   }
 
+$scope.checkLoginState = checkLoginState;
+
   window.fbAsyncInit = function() {
   FB.init({
     appId      : '1614433488809128',
