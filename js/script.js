@@ -13,6 +13,10 @@ $scope.toggleSelection = function toggleSelection(event) {
   console.log(event);
   var idx = $scope.selection.indexOf(event);
 
+  var pointOfInterest = {lat: event.place.location.latitude,
+                         lng: event.place.location.longitude,
+                         name: event.name};
+
   // is currently selected
   if (idx > -1) {
     $scope.selection.splice(idx, 1);
@@ -20,7 +24,9 @@ $scope.toggleSelection = function toggleSelection(event) {
 
   // is newly selected
   else {
-    $scope.selection.push(event);
+    $scope.selection.push(pointOfInterest);
+    //Draw the routes on the map.
+    setData($scope.selection);
   }
 };
 //---------------------------------------------------
@@ -101,8 +107,17 @@ $scope.toggleSelection = function toggleSelection(event) {
         if (response && !response.error) {
           var name = response.name;
           var picture = response.picture.data.url;
+
           if (response.events) {
-            events = response.events.data;
+            var today = new Date(); //get today's date
+            for (event of events) {
+              if (event.place.location.latitude && event.place.location.longitude) {
+                var startDate = new Date(event.start_time);
+                if (startDate >= today) {
+                  events.push(event);
+                }
+              }
+            }
           }
 
           $scope.profileName = name;
