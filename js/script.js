@@ -34,7 +34,7 @@ var events = [];
   // code below.
   function checkLoginState() {
     FB.getLoginStatus(response => {
-      this.statusChangeCallback(response);
+      statusChangeCallback(response);
     });
   }
 
@@ -59,7 +59,7 @@ var events = [];
   // These three cases are handled in the callback function.
 
   FB.getLoginStatus(response => {
-    this.statusChangeCallback(response);
+    statusChangeCallback(response);
   });
 
   };
