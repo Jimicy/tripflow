@@ -108,6 +108,8 @@ $scope.toggleSelection = function toggleSelection(event) {
           var name = response.name;
           var picture = response.picture.data.url;
 
+          console.log(response.events);
+
           if (response.events) {
             var today = new Date(); //get today's date
             for (event of response.events) {
@@ -119,6 +121,8 @@ $scope.toggleSelection = function toggleSelection(event) {
               }
             }
           }
+
+          console.log(events);
 
           $scope.profileName = name;
           $scope.profilePicURL = picture;
