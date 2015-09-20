@@ -35,7 +35,7 @@
         <div class="sidebar">
           <ul class="nav nav-tabs">
             <li class="active"><a href="#home"><span class="glyphicon glyphicon-road" aria-hidden="true"></span></a></li>
-            <li><a href="#menu1"><span class="glyphicon glyphicon-heart" aria-hidden="true"></span></a></li>
+            <li><a href="#menu1"><span class="glyphicon glyphicon-bookmark" aria-hidden="true"></span></a></li>
             <li><a href="#menu2"><span class="glyphicon glyphicon-comment" aria-hidden="true"></span></a></li>
           </ul>
           <div class="tab-content">
@@ -123,7 +123,7 @@
                               value="{{event}}"
                               ng-checked="selection.indexOf(event) > -1"
                               ng-click="toggleSelection(event)">
-                            <div class="col-md-4"><img src="https://cdn2.iconfinder.com/data/icons/flat-ui-free/200/calendar.png" width="155px" /></div>
+                            <div class="col-md-4"><img src="images/event_icon.png" width="155px" /></div>
                             <div class="col-md-8">
                               <a href="#" class="link-title">{{event.name}}</a> <br />
                               {{event.description | limitTo:115}}
@@ -152,7 +152,32 @@
               </div>
             </div>
             <div id="menu1" class="tab-pane fade">
-              <h3>Menu 2</h3>
+              <div class="travel-head">Saved Trips</div>
+              <br />
+              <div class="row saved-trip">
+                <div class="col-md-8" style="padding: 10px;">
+                  Niagara Falls, On | July 18th, 2015 <br /><span style="color: #B1B1B1;">Saved Trip</span>
+                </div>
+                <a href="#"><div class="col-md-4 view-trip">View Trip</div></a>
+              </div>
+              <div class="row saved-trip">
+                <div class="col-md-8" style="padding: 10px;">
+                  Niagara Falls, On | July 18th, 2015 <br /><span style="color: #B1B1B1;">Saved Trip</span>
+                </div>
+                <a href="#"><div class="col-md-4 view-trip">View Trip</div></a>
+              </div>
+              <div class="row saved-trip">
+                <div class="col-md-8" style="padding: 10px;">
+                  Niagara Falls, On | July 18th, 2015 <br /><span style="color: #B1B1B1;">Saved Trip</span>
+                </div>
+                <a href="#"><div class="col-md-4 view-trip">View Trip</div></a>
+              </div>
+              <div class="row saved-trip">
+                <div class="col-md-8" style="padding: 10px;">
+                  Niagara Falls, On | July 18th, 2015 <br /><span style="color: #B1B1B1;">Saved Trip</span>
+                </div>
+                <a href="#"><div class="col-md-4 view-trip">View Trip</div></a>
+              </div>
             </div>
             <div id="menu2" class="tab-pane fade">
               <h3>Menu 3</h3>
