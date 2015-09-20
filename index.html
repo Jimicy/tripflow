@@ -115,8 +115,6 @@
                   </div>
                   <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
                     <div class="panel-body">
-                    {{events.length}}
-                    Hello world
                       <div class="panel panel-new" ng-repeat="event in events">
                         <div class="panel-body">
                           <div class="row">
@@ -188,13 +186,15 @@
           return $("#popover-content").html();
         }
       });
-      $( ".add-pin" ).click(function() {
-        $("<div></div>").appendTo("#timeline").hide().append("<img id='tl-123' src='http://www.livincool.com/wp-content/uploads/2013/01/rome1.png' height='100px' style='float: left;' />").fadeIn('slow');
-        $("#loc-123").hide();
-      });
-      $( ".add-pin-fb" ).click(function() {
-        $("<div></div>").appendTo("#timeline").hide().append("<img id='tl-123' src='https://cdn2.iconfinder.com/data/icons/flat-ui-free/200/calendar.png' height='100px' style='float: left;' />").fadeIn('slow');
-        $("#loc-123").hide();
+      $(document).ready(function(){
+        $( ".add-pin" ).click(function() {
+          $("<div></div>").appendTo("#timeline").hide().append("<img id='tl-123' src='http://www.livincool.com/wp-content/uploads/2013/01/rome1.png' height='100px' style='float: left;' />").fadeIn('slow');
+          $("#loc-123").hide();
+        });
+        $( ".add-pin-fb" ).click(function() {
+          $("<div></div>").appendTo("#timeline").hide().append("<img id='tl-123' src='https://cdn2.iconfinder.com/data/icons/flat-ui-free/200/calendar.png' height='100px' style='float: left;' />").fadeIn('slow');
+          $("#loc-123").hide();
+        });
       });
     </script>
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBiGE9sjCg4FtpySvRyMHSDroAN6Ysh5Do"></script>
