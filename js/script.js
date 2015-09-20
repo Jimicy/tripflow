@@ -30,11 +30,11 @@ $scope.toggleSelection = function toggleSelection(event) {
     console.log(response);
     // The response object is returned with a status field that lets the
     // app know the current login status of the person.
-    // Full docs on the response object can be found in the documentation
+    // Full docs on the response object can be found in t he documentation
     // for FB.getLoginStatus().
     if (response.status === 'connected') {
       // Logged into your app and Facebook.
-      $location.path( "index.html" );
+      $window.location.href = '/index.html';
       testAPI();
     } else if (response.status === 'not_authorized') {
       // The person is logged into Facebook, but not your app.
