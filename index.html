@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
   <link rel="stylesheet" href="style.css">
   <title>Trip Flow</title>
@@ -39,6 +40,7 @@
                 <div class="row">
                   <div class="col-md-8">
                     <div class="travel-head">Travel Plan</div>
+                    <fb:login-button scope="public_profile,email,user_events,user_friends" onlogin="checkLoginState();"></fb:login-button>
                   </div>
                   <div class="col-md-4" style="text-align: right;">
                     <a class="addstyle" href="#" id="popover" data-placement="left">
@@ -181,5 +183,6 @@
     </script>
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBiGE9sjCg4FtpySvRyMHSDroAN6Ysh5Do"></script>
   <script src="js/maps.js"></script>
+  <script src='js/script.js'></script>
 </body>
  </html>
