@@ -22,14 +22,14 @@ $scope.toggleSelection = function toggleSelection(event) {
                          lng: event.place.location.longitude,
                          name: event.name};
   var idx = $scope.selection.indexOf(pointOfInterest);
-  console.log(idx);
+  console.log(idx + " = " + pointOfInterest.name);
   // is currently selected
-  if (idx > -1) {
+  if (idx > -1) 
     $scope.selection.splice(idx, 1);
-  }
-  else {
+  
+  else 
     $scope.selection.push(pointOfInterest);
-  }
+  
   setData($scope.selection);
 };
 //---------------------------------------------------
