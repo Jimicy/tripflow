@@ -22,17 +22,17 @@ $scope.toggleSelection = function toggleSelection(event) {
                          lng: event.place.location.longitude,
                          name: event.name};
   var idx = -1;
-  for(var i = 0; i < selection.length; i++){
-    if(selection[i].name == pointOfInterest.name){
-       console.log(pointOfInterest.name); 
-       idx = i;
+  if (selection) {
+    for(var i = 0; i < selection.length; i++){
+      if(selection[i].name == pointOfInterest.name){
+         console.log(pointOfInterest.name); 
+         idx = i;
+      }
     }
-  }
-  
+  }  
   // is currently selected
   if (idx != -1) 
     $scope.selection.splice(idx, 1);
-  
   else 
     $scope.selection.push(pointOfInterest);
   
