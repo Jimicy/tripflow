@@ -24,7 +24,7 @@ $scope.toggleSelection = function toggleSelection(event) {
   var idx = $scope.selection.indexOf(pointOfInterest);
   console.log(idx + " = " + pointOfInterest.name);
   // is currently selected
-  if (idx > -1) 
+  if (idx != -1) 
     $scope.selection.splice(idx, 1);
   
   else 
