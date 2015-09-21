@@ -22,9 +22,9 @@ $scope.toggleSelection = function toggleSelection(event) {
                          lng: event.place.location.longitude,
                          name: event.name};
   var idx = -1;
-  if (selection) {
-    for(var i = 0; i < selection.length; i++){
-      if(selection[i].name == pointOfInterest.name){
+  if ($scope.selection) {
+    for(var i = 0; i < $scope.selection.length; i++){
+      if($scope.selection[i].name == pointOfInterest.name){
          console.log(pointOfInterest.name); 
          idx = i;
       }
